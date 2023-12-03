@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operators</title>
+</head>
+<body>
+    <script >
+
+        // arithmetic Operators
+       let a=10,b=5;
+       console.log("a + b =", a + b);//addition
+       console.log("a - b =", a - b);//subtraction
+       console.log("a * b =", a * b);//multiply
+       console.log("a / b =", a / b);//division
+       console.log("a % b =", a % b);//remainder
+
+    //  unary-operators
+        // symbol= a++ a-- post-increment
+        // symbol- ++a --a -pre-increment
+
+        console.log(" a++ =", a++); 
+        console.log("a =",a)
+
+        console.log("a--", a--);
+        console.log("a=",a);
+
+        //pre-increment
+
+        console.log(" ++a =", ++a); 
+        console.log("--a =",--a)
+
+        //   assignment Operators (short-hand-operators)
+
+       console.log("a = b =", a = b);//addition
+       console.log("a += b =", a += b);//subtraction
+       console.log("a *= b =", a *= b);//multiply
+       console.log("a /= b =", a /= b);//division
+       console.log("a % b =", a %= b);//remainder
+
+
+      // comparision -operators
+    //  Symbol = equal to(==), not-equalto (!=) , not-equalto-datatype (!==) , equalto-datatype(===)  
+        let c=10,d=20;
+
+        console.log("c == d", c==d);//false
+        console.log("c!=d", c!= d);//true
+        console.log("c===d",c===d);//false
+        console.log("c!==d",c!==d );//true
+        console.log(typeof c);
+
+        console.log("c>d",c>d);//false
+        console.log("c<d",c<d);//true
+        console.log("c<=d",c<=d);//true
+        console.log("c>=d",c>=d);//false
+
+
+        //logical-operator
+        // symbol logical And (&&),logical or (||), logical not(!)
+
+        const e=90,f=1.5;
+
+        let g=e>f;
+        let h=e<f;
+        console.log("g && h =", g && h);//false
+        console.log("g || h", g || h);
+        console.log("g ! h", !(g>h));//it create negative of real value
+        
+    </script>
+</body>
+</html>
