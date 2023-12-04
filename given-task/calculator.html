@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body>
+    <div class="calculator">
+        
+        <div class="input">
+        <input type="text" id="value1" placeholder="enter value">
+        <input type="text" id="value2" placeholder="enter value">
+        </div>
+
+        <div class="calculation">
+            <button onclick="add()">Addition</button>
+            <button onclick="subtract()">Subtraction</button>
+            <button onclick="Multiply()">Multiply</button>
+            <button onclick="Division()">Division</button>
+        </div>
+    </div>
+
+    <script>
+
+        // let num1,num2;d
+
+        num1=document.getElementById("value1");
+        num2=document.getElementById("value2");
+        
+        function add()
+        {
+            // console.log(parseInt.value+parseInt.value);
+            console.log(parseInt(num1.value)+parseInt(num2.value));
+            console.log("ok");
+        }
+
+        function subtract()
+        {
+            console.log(parseInt(num1.value) - parseInt(num2.value));
+            console.log("this is subtreact");
+        }
+
+        function Multiply()
+        {
+            // console.log(parseInt.value+parseInt.value);
+            console.log(parseInt(num1.value) * parseInt(num2.value));
+            console.log("ok");
+        }
+
+        function Division()
+        {
+            console.log(parseInt(num1.value) / parseInt(num2.value));
+            console.log("this is subtreact");
+        }
+
+        // num3=num1.value+num2.value
+        // console.log(num1.value + num2.value);
+        // console.log(num3);
+
+    </script>
+</body>
+</html>
