@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GetelemetByname</title>
+</head>
+<body>
+    <!-- <input type="radio" name="gender" id="male" > -->
+    <!-- <label for="male">male</label> -->
+    <!-- <input type="radio" name="gender" id="famale" > -->
+    <!-- <label for="female">female</label> -->
+    <input type="text" id="input1"  placeholder="input1">
+    <input type="text" id="input2" placeholder="input2">
+    <button onclick="hello()">
+        solve
+    </button>
+    <script>
+        //  let a=document.getElementsByName("gender"); 
+        //  console.log(a.values); 
+
+        const a=document.getElementById("input1");
+        const b=document.getElementById("input2");
+        
+        // console.log(parseInt(a));
+        // parseInt(a.value);
+      
+        
+         function hello()
+         {
+            for (let index = 0; index < 12; index++) {
+                
+            console.log("multiply value",parseInt(a.value) * parseInt(b.value));
+            console.log("who are you");
+                // const element = hello[index];
+            // hello(element);
+         }
+         }
+
+         //parameter funtion
+         function hello2(a,b)
+         {
+            console.log(parseInt(a)*parseInt(b));
+         }
+         
+         hello2(100,200);
+
+         for (let index = 0; index < 10; index++) {
+             hello2(50,60);
+            //  const element = hello2[index];
+            // console.log(element);
+         }
+
+     </script> 
+</body>
+</html>

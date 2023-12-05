@@ -10,6 +10,11 @@
     <input type="text" name="first" id="first" class="same" value="anything" />
     <input type="text" name="second" id="second" class="same" />
 
+    <div class="block">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, neque.</p>
+      <p id="p1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, neque.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque, neque.</p>
+    </div>
     <script>
       // Get HTML DATA
 
@@ -43,16 +48,16 @@
 
       // querySelector
 
-      //   let inpData = document.querySelector("input");
+        let inpData = document.querySelector('.block>#p1+p').style.color="red";
       // //   // let inpData = document.getElementById("first").value
-      //   console.log(inpData);
+        console.log(inpData);
       //   console.log(inpData.value);
 
       //   querySelectorAll
 
-      let inpData = document.querySelectorAll("input");
+      // let inpData = document.querySelectorAll("block");
       //   // let inpData = document.getElementById("first").value
-      console.log(inpData);
+      // console.log(inpData);
       //   console.log(inpData.value);   // undefined
     </script>
   </body>
