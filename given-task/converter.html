@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word-converter</title>
+</head>
+<body>
+    <div class="display">
+    <input type="text" id="display">
+    </div>
+    
+    <div class="controls">
+    <button onclick="uppercase()">Uppercase</button>
+    <button onclick="">Lowercase</button>
+    <button onclick="">Word-count</button>
+    <button onclick="">Character-Count</button>
+    <button onclick="">Clear</button>
+    <button onclick="">Find&Replace</button>
+    <button onclick="">remove extra space</button>
+    </div>
+
+    <script>
+        
+        let a=document.getElementById('display');
+
+        function uppercase()
+         {
+            console.log(a.value);
+            console.log(a.toUpperCase());    
+            console.log(a.length);    
+        }
+    </script>
+
+</body>
+</html>
