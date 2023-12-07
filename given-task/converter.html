@@ -6,30 +6,72 @@
     <title>Word-converter</title>
 </head>
 <body>
-    <div class="display">
-    <input type="text" id="display">
+    <div>
+    <input type="text" id="display" placeholder="Enter value">
+    <input type="text" id="find" placeholder="Find">
     </div>
     
     <div class="controls">
-    <button onclick="uppercase()">Uppercase</button>
-    <button onclick="">Lowercase</button>
-    <button onclick="">Word-count</button>
-    <button onclick="">Character-Count</button>
-    <button onclick="">Clear</button>
-    <button onclick="">Find&Replace</button>
-    <button onclick="">remove extra space</button>
+    <button onclick="up()">Uppercase</button>
+    <button onclick="low()">Lowercase</button>
+    <button onclick="word()">Word-count</button>
+    <button onclick="len()">Character-Count</button>
+    <button onclick="cleaning()">Clear</button>
+
+    <button onclick="find()">Find</button>
+    <button onclick="replace()">Replace</button>
+    <button onclick="remove()">remove extra space</button>
     </div>
 
     <script>
         
-        let a=document.getElementById('display');
-
-        function uppercase()
-         {
-            console.log(a.value);
-            console.log(a.toUpperCase());    
-            console.log(a.length);    
+        let text=document.getElementById('display');
+        
+        function up()
+        {
+             console.log(text.value);
+             console.log(text.value.toUpperCase());
         }
+
+        function low()
+         {
+            console.log(text.value);
+            console.log(text.value.toLowerCase());    
+        }
+
+        function word()
+         {
+            console.log(text.value);
+            console.log(wordsLen(str));
+            // console.log(text.value.WordsLen());
+        }
+        
+        function len()
+         {
+            console.log(text.value);
+            console.log(text.value.length);    
+        }
+        
+        function cleaning()
+        {
+          console.log(text.value);
+          text.value="";//it remove the the given value 
+        }
+
+        function find()
+        {
+            let b=document.getElementById('Find');
+            console.log(find(b.value));
+            console.log(b.value);
+        }
+
+        function remove()
+         {
+            console.log(text.value);
+         console.log(text.value.trim());   
+        }
+        
+
     </script>
 
 </body>
