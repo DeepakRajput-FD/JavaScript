@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validation</title>
+</head>
+<body>
+    <input type="text" id="name" placeholder="enter name" onblur="handle()">
+    <input type="text" id="email" placeholder="enter email" onblur="handle()">
+    <input type="text" id="pass" placeholder="enter password" onblur="handle()">
+    <input type="text" id="phoneno" placeholder="enter phone no" onblur="handle()">
+    <span id="show1"></span>
+
+    <script>
+    
+    let your_name=document.getElementById("name");
+    let your_email=document.getElementById("email");    
+    let your_password=document.getElementById("pass");    
+    let your_phone=document.getElementById("phoneno");
+
+        function handle()
+        {
+            if (your_name.value=='')
+             {
+                document.getElementById("show1").innerHTML="Enter Name";
+             }
+           
+
+           else  if (your_email.value=='')
+             {
+                document.getElementById("show1").innerHTML="Enter Your Email"
+             }
+            
+
+           else  if (your_password.value=='')
+             {
+                document.getElementById("show1").innerHTML="Enter Password";
+             }
+            
+           else   if (your_phone.value=='')
+             {
+                document.getElementById("show1").innerHTML="Enter Phone-no";
+             }
+            else
+             {
+                document.getElementById("show1").innerHTML="";
+             }
+
+        }
+
+    </script>
+
+</body>
+</html>

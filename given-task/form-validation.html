@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form-Validation</title>
+</head>
+<body>
+    <input type="text" id="name2" placeholder="Enter Your Name" onblur="handle_name()">
+    <span id="show1"></span>
+    <input type="text" id="email" placeholder="Enter Your Email" onblur="handle_email()">
+    <span id="show2"></span>
+    <input type="text" id="pass" placeholder="Enter Your Password" onblur="handle_pass()">
+    <span  id="show3"></span>
+    <input type="text" id="ph_no" placeholder="Enter Your ph.no" onblur="handle_ph_no()">
+        <span id="show4"></span>
+    <script>
+        
+        let your_name=document.getElementById("name2");
+        let your_email=document.getElementById("email");
+        let Your_pass=document.getElementById("pass");
+        let Your_Ph_no=document.getElementById("ph_no");
+
+        function handle_name() 
+        {
+            // console.log("deepak");
+            if (your_name.value=='') 
+            {
+                document.getElementById("show1").innerHTML="please enter valid username";    
+            }    
+            else
+            {
+                document.getElementById("show1").innerHTML="thanks";
+            }
+        }
+
+        function handle_email()
+        {
+            // console.log("deepak");
+            if (your_email.value=='') 
+            {
+                document.getElementById("show2").innerHTML="please enter valid email";    
+            }    
+            else
+            {
+                document.getElementById("show2").innerHTML="thanks";
+            }
+        }
+
+        function handle_pass() 
+        {
+            // console.log("deepak");
+            if (Your_pass.value=='') 
+            {
+                document.getElementById("show3").innerHTML="please enter valid password";    
+            }    
+            else
+            {
+                document.getElementById("show3").innerHTML="thanks";
+            }
+        }
+
+        function handle_ph_no() 
+        {
+            // console.log("deepak");
+            if (Your_Ph_no.value=='') 
+            {
+                document.getElementById("show4").innerHTML="please enter valid phone-no";    
+            }    
+            else
+            {
+                document.getElementById("show4").innerHTML="thanks";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
