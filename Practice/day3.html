@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+<script>
+
+const array2=new Array(1,2,"why",true);//array declaration
+console.log(typeof array2);//object
+console.log( typeof array2[4] );//it show the index num of 4
+
+array2.push('hello');//it add the value in array and it is required the arguement
+console.log(array2.length);
+console.log(typeof(array2[5]));
+
+array2.pop();//it doesn't required arguement
+console.log(array2);
+
+array2.unshift(23);//it is added on starting
+console.log(array2);
+
+array2.shift(23);//it is remove on the starting
+console.log(array2);
+
+console.log(array2.includes(23));//it check the value is avalible in array or not.it is boolean.
+
+let newarray=array2.join();//it is converted into string.
+
+console.log(newarray);
+
+console.log(newarray.indexOf(2));
+
+</script>
+
+</body>
+</html>
