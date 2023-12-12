@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day6</title>
+</head>
+<body>
+   <h1> three value of comparision</h1>
+   
+   <input type="text" placeholder="Enter Value" id="input1" >
+   <input type="text" placeholder="Enter Value" id="input2" >
+   <input type="text" placeholder="Enter Value" id="input3" >
+   <button onclick="Find()">
+        Find 
+   </button>
+   
+   <script>
+
+        let a=document.getElementById("input1");
+        let b=document.getElementById("input2");
+        let c=document.getElementById("input3");
+
+        // it is not worked
+        function Find()
+ {
+       if (a>=b && a>=c)
+        {
+            console.log("ans", parseInt(a.value));
+       }
+       else if(b>=a && b>=c)
+       {
+        console.log("Ans",parseInt(b.value));
+       }
+       else if(c>=a && c>=b)
+       {
+        console.log("Ans",parseInt(c.value));  
+    }
+}
+
+
+//it is fixed it is worked
+  /*  function Find() 
+    {
+        let a=60,b=400,c=30;
+    if(a>b && a>c)
+    {
+        console.log("a is bigg",a);
+    }
+   else if(b>a && b>c)
+    {
+        console.log("b is bigg",b);
+    }
+   else if(c>b && c>a)
+    {
+        console.log("c is bigg",c);
+    }
+
+    else
+    {
+        console.log("thanks");
+    }
+    } */
+
+   </script>
+
+</body>
+</html>
