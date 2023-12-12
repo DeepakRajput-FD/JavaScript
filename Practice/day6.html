@@ -22,21 +22,24 @@
         let c=document.getElementById("input3");
 
         // it is not worked
-        function Find()
- {
-       if (a>=b && a>=c)
-        {
-            console.log("ans", parseInt(a.value));
-       }
-       else if(b>=a && b>=c)
-       {
-        console.log("Ans",parseInt(b.value));
-       }
-       else if(c>=a && c>=b)
-       {
-        console.log("Ans",parseInt(c.value));  
-    }
-}
+        function Find() {
+            if (parseInt(a.value) > parseInt(b.value) && parseInt(a.value)>parseInt(c.value)  ) 
+            {
+            console.log("it is from a big",a.value);    
+            }
+            else if(parseInt(b.value) > parseInt(a.value) && parseInt(b.value)>parseInt(c.value))
+            {
+                console.log("it is from b big",b.value);
+            }
+            else if(parseInt(c.value) > parseInt(a.value) && parseInt(c.value)>parseInt(b.value))
+            {
+                console.log("it is from c big",c.value);
+            }
+            else
+            {
+                console.log("it is wrong");
+            }
+        }
 
 
 //it is fixed it is worked

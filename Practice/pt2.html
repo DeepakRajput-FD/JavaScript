@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="text" id="input1" placeholder="enter value">
+    <input type="text" id="input2" placeholder="enter value">
+    <button onclick="compare()">
+        compare
+    </button>
+
+    <script>
+        let a=document.getElementById("input1");
+        let b=document.getElementById("input2");4
+
+        //if you want compare the value then you want to compare the value in if else.  
+
+        function compare() {
+            if (parseInt(a.value) >= parseInt(b.value)) 
+            {
+            console.log("it is from a big",a.value);    
+            }
+            else if(parseInt(b.value)>= parseInt(a.value))
+            {
+                console.log("it is big",b.value);
+            }
+        }
+    </script>
+
+</body>
+</html>
