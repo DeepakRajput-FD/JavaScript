@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day7</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Enter Biggest Value" id="value1">
+    <input type="text" placeholder="Enter Biggest Value" id="value2">
+    <!-- <input type="text" placeholder="Enter Biggest Value" id="value3"> -->
+    
+    <button onclick="find()">
+        Find
+    </button>
+
+    <script>
+        
+        let a=document.getElementById("value1");
+        let b=document.getElementById("value2");
+        // let c=document.getElementById("value3");
+    
+        function find()
+        {
+            (a.value>b.value) ? console.log("this value is big",a.value):console.log("this value is big",b.value);
+            // console.log(d.value);
+        }
+
+    </script>
+
+</body>
+</html>
