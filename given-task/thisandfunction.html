@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variables</title>
+</head>
+<body>
+    <input type="text" placeholder="enter name" id="username" onblur="handleUser(this,'generator1','UserName')">
+    <span id="generator1"></span>
+    <input type="text" placeholder="enter email" id="useremail" onblur="handleUser(this,'generator2','UserEmail')">
+    <span id="generator2"></span>
+    <input type="text" placeholder="enter password" id="userpassword" onblur="handleUser(this,'generator3','Userpassword')">
+    <span id="generator3"></span>
+    <input type="text" placeholder="enter phone" id="userphone" onblur="handleUser(this,'generator4','UserPhone')">
+    <span id="generator4"></span>
+
+    <script>
+        function handleUser(a,spanid,nothing)
+         {
+            if (a.value=="")
+             {
+                document.getElementById(spanid).innerText="Enter Valid"+nothing;    
+            }    
+            else
+            {
+                document.getElementById(spanid).innerText="";
+            }
+        }
+    </script>
+
+</body>
+</html>

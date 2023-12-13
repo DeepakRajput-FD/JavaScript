@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnInput</title>
+</head>
+<body>
+    
+    <input type="text" placeholder="Enter Value" id="value1" onblur="handle(this,'error1','Good Data')">
+    <span id="error1">
+
+    </span>
+
+    <input type="text" placeholder="Enter Value" id="value2" onblur="handle(this,'error2','Good Data')">
+    <span id="error2">
+        
+    </span>
+
+    <script>
+        function handle(a,hand,deepak)
+        {
+
+        if (a.value=='') 
+        {
+            document.getElementById(hand).innerText="Enter"+deepak;    
+        }   
+        else
+        {
+            document.getElementById(hand).innerText="";
+        }
+
+        }
+    </script>
+
+</body>
+</html>
