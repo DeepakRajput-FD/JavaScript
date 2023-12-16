@@ -138,10 +138,11 @@
     <span  id="generator1"> </span>
     <span id="phone-password">password</span>
     <input type="password" placeholder="password" id="input2" oninput="handleaverage(this,'generator2','password')">
+    <button onclick="show()" id="b2">show</button>
     <span  id="generator2"> </span>
     </div>
 
-    <button id="b1">
+    <button id="b1" onclick="login_page()">
         Log in
     </button>
 
@@ -225,6 +226,37 @@ function handleaverage(d,c,msg)
     {
         document.getElementById(c).innerText="";
     }
+}
+
+function show() 
+{
+    
+    let pswd=document.getElementById("input2");
+
+    let btn2=document.getElementById("b2");
+
+    //we are comparing the button and password. 
+
+    if(b2.innerText=="show"&&pswd.type=="password")
+    {
+        b2.innerText="hide";
+        pswd.type="text";    
+    }
+
+    else
+    {
+        b2.innerText="show";
+        pswd.type="password";
+    }
+
+    // if (pswd.type=="password") 
+    // {
+    //     pswd.type="text";    
+    // }
+    // else
+    // pswd.type="password";
+    // {
+    // } it is unneccessary code
 }
 
 </script>
