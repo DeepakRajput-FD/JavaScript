@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Instagram Login</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-</head>
 <style>
 
     /* @font-face {
@@ -28,17 +27,25 @@
         text-align: center;
         text-transform: capitalize;
     }
+
+    h1{
+        font-size: 50px;
+        font-family: cursive;
+    }
+
     .inputes
     {
         display: flex;
         flex-direction: column;
         margin: 0px 50px;
         row-gap: 10px;
+        position: relative;
     }
     input
     {
-        padding: 5px;
+        padding: 15px 5px;
         border-radius: 5px;
+        background: #E8F0FE;
     }
     button
     {
@@ -90,22 +97,47 @@
     {
         padding-right: 10px;
     }
+
+    #Phone-number
+    {
+        position: absolute;
+        font-size: 12px;
+        left: 10px;
+        top: 2px;
+        /* transform: translateY(20px); */
+        /* text-align: left; */
+        /* padding-left: 10px; */
+        display: none;
+    }
+
+    #phone-password
+    {
+        display: none;
+        position: absolute;
+        font-size: 12px;
+        left: 10px;
+        top: 72px; 
+    }
+
 </style>
+</head>
 <body>
     
     <header id="header1">
 <div class="wrapper">
     
     <div class="name">
-        <h2>
+        <h1>
             Instagram
-        </h2>
+        </h1>
     </div>
 
     <div class="inputes">
+        <span id="Phone-number">Phone number, username, or email</span>
     <input type="text" placeholder="Phone number,username or email" id="input1" oninput="handlesum(this,'generator1','Phone-number')">
     <span  id="generator1"> </span>
-    <input type="password" placeholder="password" id="input2" oninput="handlesum(this,'generator2','password')">
+    <span id="phone-password">password</span>
+    <input type="password" placeholder="password" id="input2" oninput="handleaverage(this,'generator2','password')">
     <span  id="generator2"> </span>
     </div>
 
@@ -155,20 +187,44 @@
 </header>
 
 <script>
+    
+    function handlesum(d,c,msg)
+    {
+        
+        document.getElementById("Phone-number").style.display="block";
+        // document.getElementById("phone-password").style.display="block";
 
-function handlesum(d,c,msg)
-{
     if (d.value=="")
      {
         document.getElementById(c).innerText="enter "+msg;
         document.getElementById(c).style.color="red";
+        document.getElementById("Phone-number").style.display="none";
     }    
     else
     {
         document.getElementById(c).innerText="";
     }
+    
 
-    document.getElementById("name").style.display="none";
+}
+
+
+function handleaverage(d,c,msg)
+    {
+        
+        // document.getElementById("Phone-number").style.display="block";
+        document.getElementById("phone-password").style.display="block";
+
+    if (d.value=="")
+     {
+        document.getElementById(c).innerText="enter "+msg;
+        document.getElementById(c).style.color="red";
+        document.getElementById("phone-password").style.display="none";
+    }    
+    else
+    {
+        document.getElementById(c).innerText="";
+    }
 }
 
 </script>
