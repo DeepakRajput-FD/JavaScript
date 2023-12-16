@@ -184,11 +184,13 @@
         <img src="./images/green_icon.svg" alt="" id="green_icon">
         <img src="./images/microsoft.png" alt="" id="microsoft">
     </div>
+    </div>
 
 </header>
 
 <script>
     
+    //it is input1
     function handlesum(d,c,msg)
     {
         
@@ -209,7 +211,7 @@
 
 }
 
-
+//it is input2
 function handleaverage(d,c,msg)
     {
         
@@ -228,6 +230,8 @@ function handleaverage(d,c,msg)
     }
 }
 
+
+//we are comparing the button and password. 
 function show() 
 {
     
@@ -235,7 +239,6 @@ function show()
 
     let btn2=document.getElementById("b2");
 
-    //we are comparing the button and password. 
 
     if(b2.innerText=="show"&&pswd.type=="password")
     {
@@ -257,6 +260,28 @@ function show()
     // pswd.type="password";
     // {
     // } it is unneccessary code
+}
+
+
+//it compare the value of given input value
+function login_page()
+{
+
+    let input1=document.getElementById("input1");
+    let input2=document.getElementById("input2");
+    
+    if (input1.value&&input2.value)
+     {
+        alert("are you want to shift to the second page");    
+    }   
+    else if(input1.value||input2.value)
+    {
+        alert("are you missing any value");    
+    } 
+    else
+    {
+        alert("sorry,you are not put any value");    
+    }
 }
 
 </script>
