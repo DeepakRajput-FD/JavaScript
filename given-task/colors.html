@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colors</title>
+    <style>
+        *
+        {
+            padding: 0;
+            box-sizing: border-box;
+            margin: 0 auto;
+            width: 40%;
+        }
+        p{
+            border: 1px solid black;
+            width: fit-content;
+        }
+        button
+        {
+            margin: 100px;
+            padding:5px 10px;
+        }
+        #show_colors
+        {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+            margin: 40px 0px;
+        }
+    </style>
+</head>
+<body>
+    
+<div>
+    <p>red,green,blue,yellow,teal,gold,brown,purple,grey,orange</p>
+</div>
+
+<div id="show_colors">
+
+</div>
+
+<button onclick="my_color()">
+    color
+</button>
+
+<script>
+    let color=['red','green','blue','yellow','teal','gold','brown','purple','grey','orange'];
+    function my_color()
+     {
+        let a=document.getElementById("show_colors").style.background=color[0];
+            
+            for (let index = 0; index <=color.length; index++) {
+                const element = color[index];
+                a.style.background="green";
+            }
+     }
+</script>
+
+</body>
+</html>
