@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User_color</title>
+    <style>
+        #block
+        {
+            width: 500px;
+            height: 500px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id="user_color">
+    
+    <button id="button1" onclick="find_color()">
+        find color
+    </button>
+
+    <div id="block">
+
+    </div>
+
+    <script>
+
+        function find_color()
+         {
+            let input1= document.getElementById("user_color").value;
+            let show_color=document.getElementById("block");
+            show_color.style.background=input1; //input1 it is give the value to show_color
+        }
+        
+
+</script>
+
+</body>
+</html>

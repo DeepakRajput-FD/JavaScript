@@ -5,57 +5,83 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Colors</title>
     <style>
-        *
+        #blocks
         {
-            padding: 0;
-            box-sizing: border-box;
-            margin: 0 auto;
-            width: 40%;
-        }
-        p{
+            width: 300px;
+            height: 300px;
             border: 1px solid black;
+        }
+        #colorsname
+        {
             width: fit-content;
-        }
-        button
-        {
-            margin: 100px;
-            padding:5px 10px;
-        }
-        #show_colors
-        {
-            width: 200px;
-            height: 200px;
+            height: fit-content;
             border: 1px solid black;
-            margin: 40px 0px;
+            padding: 10px;
+        }
+        #button1
+        {
+            margin: 50px;
+            color: teal;
+        
+        }
+        #block2
+        {
+            width: 300px;
+            height: 300px;
+            margin: 0px 0px 0px 100px;
+            border: 1px solid black;
+        }
+        .wrapper
+        {
+            display: flex;
         }
     </style>
+
 </head>
 <body>
-    
-<div>
-    <p>red,green,blue,yellow,teal,gold,brown,purple,grey,orange</p>
-</div>
 
-<div id="show_colors">
+    <header>
+        <div class="wrapper">
+    <div id="colorsname">
+        red,green,blue,yellow,gray,crimson,black
+    </div>
+    <div id="blocks">
 
-</div>
+    </div>
+    <button onclick="changecolor()" id="button1">
+        change color
+    </button>
 
-<button onclick="my_color()">
-    color
-</button>
+    <div id="block2">
 
-<script>
-    let color=['red','green','blue','yellow','teal','gold','brown','purple','grey','orange'];
-    function my_color()
-     {
-        let a=document.getElementById("show_colors").style.background=color[0];
-            
-            for (let index = 0; index <=color.length; index++) {
-                const element = color[index];
-                a.style.background="green";
-            }
-     }
-</script>
+    </div>
+    </div>
+    </header>
+
+    <script>
+        
+        let array_colors=["red","green","blue","yellow","gray","crimson","black"];
+        let index=0;
+        let block2 =document.getElementById("block2");   
+        function changecolor()
+         {
+            document.getElementById("blocks").style.background=array_colors[index];
+            document.getElementById("button1").style.background=array_colors[index];
+
+             index++;//it increase the color of an element
+
+             if (index==3)
+              {
+                alert(block2.innerText="are you want to visit");
+                block2.innerText="are you want to visit to another color";
+             }
+
+             else if (index==6)
+              {
+                block2.innerText="it is last color";   
+             }
+         }
+    </script>
 
 </body>
 </html>
