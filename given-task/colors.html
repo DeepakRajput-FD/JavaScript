@@ -61,22 +61,21 @@
     <script>
         
         let array_colors=["red","green","blue","yellow","gray","crimson","black"];
-        let index=0;
+        let i=0;
         let block2 =document.getElementById("block2");   
         function changecolor()
          {
-            document.getElementById("blocks").style.background=array_colors[index];
-            document.getElementById("button1").style.background=array_colors[index];
+            document.getElementById("blocks").style.background=array_colors[i];
+            document.getElementById("button1").style.background=array_colors[i];
 
-             index++;//it increase the color of an element
+             i++;//it increase the color of an element
 
-             if (index==3)
+             if (i==3)
               {
                 alert(block2.innerText="are you want to visit");
                 block2.innerText="are you want to visit to another color";
              }
-
-             else if (index==6)
+             else if (i==6)
               {
                 block2.innerText="it is last color";   
              }

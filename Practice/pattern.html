@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let d=9;
+        
+        for (let i = 0; i <=d; i++) 
+        {
+            for (let j = 0; j <=i ; j++)
+             {
+                document.write(j);//inner loop
+                document.write("&nbsp &nbsp");
+            }
+            document.write(i);    //outer loop
+            document.write("<br>");
+        }
+        //triangle
+        
+
+        document.write("<br>");
+        document.write("<br>");
+
+        for (let i = 0; i <=d; i++)
+         {
+            for (let j = 0; j <=d; j++) 
+            {
+            
+                document.write("* ");  
+                
+                // for (let k = 0; k <=d; k++) {
+                //     // const element = array[k];
+                //     document.write(k);
+                // }
+                
+            }
+            // document.write("s");
+                document.write("<br>");
+        }
+        
+
+
+    </script>
+
+</body>
+</html>
