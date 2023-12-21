@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+</head>
+<body>
+    
+    <script>
+        let m=5;
+
+        // for (let row = 1; row <=m; row++) //it creates rows
+        // {
+            
+        //     for (let column = 1; column <=3; column++)//it create columns 
+        //     {
+                
+        //         document.write("&nbsp");
+        //         document.write("*");
+        //     }
+        //     document.write("<br>");
+            
+        // }
+
+        for (let row = 0; row < m; row++) 
+        {
+            document.write("&nbsp &nbsp");    
+            for (let column = 0; column <= row; column++)
+             {
+                //  document.write("&nbsp &nbsp");
+                document.write(" &nbsp x");
+            }
+            document.write("<br>");
+            
+        }
+    </script>
+
+</body>
+</html>

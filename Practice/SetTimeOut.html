@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SetTimeOut</title>
+</head>
+<body>
+    <script>
+            document.write("It is setTimeout ");  
+            document.write("<br> ");      
+            document.write("It is setTimeout "); 
+            
+            console.log("It is setTimeout ");    
+            
+
+        setTimeout(() =>//it is not going to infinite 
+         {
+            //it is remove the previous element.
+            document.write("It is setTimeout ");
+            console.log("It is setTimeout ");    
+        }
+        , 3000);
+    </script>
+</body>
+</html>

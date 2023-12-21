@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chatboat</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .wrapper
+        {
+            width: 30%;
+            margin: 50px auto;
+            border: 1px solid #000000;
+            padding: 50px 50px 20px;
+            border-radius:10px ;
+            background-color: midnightblue;
+        }
+        .contain
+        {
+            text-align: center;
+        }
+        i
+        {
+            color: blue;
+        }
+        input
+        {
+            background-color: forestgreen;
+            border-radius: 5px;
+            padding: 5px;
+            width: 90%;
+            background: #fdfdfd;
+        }
+        button
+        {
+            padding: 5px;
+            border-radius: 5px;
+        }
+        img
+        {
+            width: 100%;
+        }
+        span
+        {
+            color:  rgb(126, 237, 22);
+            text-transform: capitalize;
+        }
+        h1{
+            text-align: center;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="wrapper">
+        <h1>Apna Chatboat</h1>
+        <div class="contain">
+
+            <img src="./image/chatboat.png" alt="">
+
+            <span id="show">
+                
+            </span>
+
+        <div class="inputes">
+
+        <input type="text" id="customer1" placeholder="Ask Me">
+        <button onclick="request()"><i class="fa-solid fa-plane"></i></button>
+        
+        </div>
+        </div>
+        </div>
+    <script>
+
+        function request()
+         {
+         let user1=document.getElementById("customer1").value;
+         let question1="card hai";
+         let question2="number chahiye";
+         let question3="account number"; 
+         let question4="what is your name",question5="aapka name kya hai";
+         let show=document.getElementById("show");    
+
+            if (user1==question1) 
+            {    
+                show.innerText="ha";
+            }
+            else if(user1==question2)
+            {
+                show.innerText="mil jayega";
+            }
+            else if(user1==question3)
+             {
+                show.innerText="yeh lo 987654321";    
+             }
+             else if (user1==question4 || user1==question5)
+              {
+                if (user1==question4)
+                 {
+                    show.innerText="My Name is ChatBoat";        
+                }
+                else if (user1==question5)
+                 {
+                    show.innerText="mera name apna chatboat hai";    
+                }   
+                  }
+
+                  else
+                {
+                    show.innerText="me aapko kaise guide kar sakta hu";
+                }
+
+            // document.getElementById("show").innerText=user1.value;
+            
+        }
+    </script>
+
+</body>
+</html>
