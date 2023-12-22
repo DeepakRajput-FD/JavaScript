@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 10</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrapper
+        {
+            display: flex;
+            justify-content: center;
+            column-gap: 20px;
+            padding-top: 100px;
+        }
+        
+        div[class*="block"]
+        {
+            width: 250px;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+        .block1
+        {
+            background-color: green;
+            height: 210px;
+            margin-top: 30px;
+        }
+        .block2
+        {
+            background-color: blue;
+            height: 230px;
+            margin-top: 20px;
+        }
+        .block3
+        {
+            background-color: teal;
+            height: 270px;
+        }
+        .block4
+        {
+            background-color: crimson;
+            height: 230px;
+            margin-top: 20px;
+        }
+        .block5
+        {
+            background-color: yellow;
+            height: 210px;
+            margin-top: 30px;
+        }
+       .buttons
+       {
+        text-align: center;
+        margin: 40px 0px;
+         }
+        button
+        {
+           text-transform: capitalize;
+            padding: 20px;
+            margin: 0px 100px;
+       }
+       i
+       {
+        font-size: 30px;
+       }
+
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- <div class="block1" id="color1"></div> -->
+        <!-- <div class="block2" id="color2"></div> -->
+        <div class="block3" id="color3"></div>
+        <!-- <div class="block4" id="color4"></div> -->
+        <!-- <div class="block5" id="color5"></div> -->
+    </div>
+    <div class="buttons">
+        <button onclick="left()"><i class="fa-solid fa-arrow-left"></i></button>
+        <button onclick="right()"><i class="fa-solid fa-arrow-right"></i></button>
+    </div>
+
+    <script>
+        let valueIndex=0;
+        arr=['red','green','blue','purple'];
+        let color=document.getElementById("color3");
+
+        function right()
+        {
+            // color.style.background=arr[valueIndex];
+            // valueIndex++;
+
+            setInterval(() =>
+         {
+            // console.log("hello");  
+            color.style.background=arr[valueIndex];
+            valueIndex++;  
+            if (valueIndex==3)
+            {
+                console.log("stopped");   
+                // left();
+            }
+        }, 1000);
+
+        }
+        function left()
+        {
+            arr2=["black", "white", "gray", "silver", "maroon", "red", "purple", "fushsia", "green", "lime", "olive", "yellow", "navy", "blue", "teal",  "aqua"];
+
+            setInterval(() =>
+         {
+            // console.log("hello");  
+            color.style.background=arr2[valueIndex];
+            valueIndex++;  
+        }, 1000);
+        }
+
+      
+    </script>
+</body>
+</html>
