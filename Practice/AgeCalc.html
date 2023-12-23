@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Age Calc</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .info
+        {
+            padding: 20px;
+            width: 15%;
+            margin: 0 auto;
+            text-align: center;
+        }
+        input
+        {
+            padding: 5px 10px;
+            margin: 10px 0px;
+        }
+        button
+        {
+            padding: 5px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="info">
+    <input type="text" id="input1" placeholder="Enter Name">
+    <input type="text" id="input2" placeholder="Enter Day Of year">
+    <input type="text" id="input3" placeholder="Enter Today's Date">
+    <button onclick="Age()">Check</button>
+    </div>
+
+    <script>
+        function Age()
+        {
+            let input1=document.getElementById('input1').value;
+            let input2=document.getElementById('input2').value;
+            let input3=document.getElementById('input3').value;
+
+            console.log("Your Name "+input1 );
+            console.log("Your Birth on that Year "+input2);
+            console.log("Today's Date "+input3);
+
+           input3= input3-input2;
+           console.log(input3);
+        }
+    </script>
+</body>
+</html>
