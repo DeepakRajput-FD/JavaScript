@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calc</title>
+</head>
+<body>
+    
+    <input type="text" name="" id="display">
+    <button id="input1" onclick="function1()">1</button>
+    <button id="input2" onclick="function2()">2</button>
+    <button onclick="function_plus_()" id="plus">+</button>
+    <button id="input3" onclick="Total()">=</button>
+    
+    <script>
+        
+        let display=document.getElementById('display');
+        let input1=document.getElementById('input1');
+        let input2=document.getElementById('input2');
+        let input3=document.getElementById('input3');
+
+       function function_plus_()
+        {
+            display.value=document.getElementById('plus').innerText;
+        }
+        
+        function Total()
+         {
+            display.value= parseInt (input1.innerText) + parseInt( input2.innerText);
+        }
+
+        function function1()
+        {
+            display.value=input1.innerText;
+            console.log(display);
+        }
+        
+        function function2()
+        {
+            display.value=input2.innerText;
+            console.log(display);
+        }
+
+    </script>
+
+</body>
+</html>
