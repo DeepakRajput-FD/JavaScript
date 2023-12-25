@@ -1,0 +1,142 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        #block
+        {
+            width: 250px;
+            height: 300px;
+            border: 1px solid black;
+            background: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="block">
+
+    </div>
+    <button >
+      change
+    </button>
+    
+    <script>
+        
+        function change()
+        {
+             let a =document.getElementById('block');
+            //   a.style.background="red";
+                 if (a.style.background ==="red")
+                {
+                    console.log("hello");
+                 a.style.background = "green";    
+                }
+            }
+
+            change();
+    </script>
+
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        #block {
+            width: 250px;
+            height: 300px;
+            border: 1px solid black; 
+        }
+    </style>
+</head>
+<body>
+    <div id="block"></div>
+    <button onclick="change()">Change</button>
+    
+    <button onclick="previous_change()">Change2</button>
+    
+    <script>
+        let a = document.getElementById('block');
+        a.style.background="red";
+        arr=[ "black", "gray", "silver", "maroon",  "purple", "teal", "green"];
+        arr2=["lime", "olive", "yellow", "navy", "blue", "teal",  "aqua"];
+       
+        function change() {
+            
+            // Check the background color and toggle between red and green
+            if (a.style.background=="red")
+             {
+                a.style.background=arr[0];    
+            }
+            else if (a.style.background==arr[0])
+             {
+                a.style.background=arr[1];
+            }
+            else if (a.style.background==arr[1])
+             {
+                a.style.background=arr[2];
+            }
+            else if (a.style.background==arr[2])
+             {
+                a.style.background=arr[3];
+            }
+            else if (a.style.background==arr[3])
+             {
+                a.style.background=arr[4];
+            } else if (a.style.background==arr[4])
+             {
+                a.style.background=arr[5];
+            } else if (a.style.background==arr[5])
+             {
+                a.style.background=arr[6];
+            }
+            else
+            {
+                console.log("hello");
+            }
+          
+        }
+
+        function previous_change() {
+            
+            // Check the background color and toggle between red and green
+            if (a.style.background=="red")
+             {
+                a.style.background=arr2[0];    
+            }
+            else if (a.style.background==arr2[0])
+             {
+                a.style.background=arr2[1];
+            }
+            else if (a.style.background==arr2[1])
+             {
+                a.style.background=arr2[2];
+            }
+            else if (a.style.background==arr2[2])
+             {
+                a.style.background=arr2[3];
+            }
+            else if (a.style.background==arr2[3])
+             {
+                a.style.background=arr2[4];
+            } else if (a.style.background==arr2[4])
+             {
+                a.style.background=arr2[5];
+            } else if (a.style.background==arr2[5])
+             {
+                a.style.background=arr2[6];
+            }
+          
+        }
+
+    </script>
+</body>
+</html>
