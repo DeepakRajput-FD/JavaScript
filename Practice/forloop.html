@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Loop</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #block
+        {
+            width: 250px;
+            height: 250px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="block">
+
+    </div>
+    
+    <script>
+        // this program basically for background colors and it is break if their condition match.
+           
+        arr=["black", "gray", "silver", "maroon",  "purple", "teal", "green"];
+        let a=10;
+
+        for (let i = 0; i < arr.length; i++) 
+        {
+            console.log("hello");
+            if (i==2) 
+            {
+                console.log("what");
+                break;
+            }
+            document.getElementById('block').style.background=arr[i];
+        
+        }
+    
+    </script>
+</body>
+</html>
