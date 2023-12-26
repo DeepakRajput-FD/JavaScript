@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Do-While</title>
+</head>
+<body>
+    
+    <script>
+
+        arr=["black", "gray", "silver", "maroon",  "purple", "teal", "green"];
+
+        let i=0;
+       do {
+           console.log(i);
+           document.body.style.background=arr[i];
+           
+           if (i==2)
+           {
+               console.log("this is color");
+               break;
+            }
+            i++;
+       } 
+       while (i<arr.length);
+    </script>
+
+</body>
+</html>
