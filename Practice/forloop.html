@@ -31,13 +31,18 @@
         arr=["black", "gray", "silver", "maroon",  "purple", "teal", "green"];
         let a=10;
 
-        for (let i = 0; i < arr.length; i++) 
+        for (let i = 1; i < arr.length; i++) 
         {
             console.log("hello");
             if (i==2) 
             {
                 console.log("what");
-                break;
+                // continue;
+            }
+            else if (i==3) 
+            {
+                console.log("name");
+                break;  
             }
             document.getElementById('block').style.background=arr[i];
         
