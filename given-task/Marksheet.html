@@ -67,6 +67,18 @@
             padding: 5px ;
         }
 
+        .wrapper2
+        {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 40px;
+            color: blue;
+        }
+        #spn2
+        {
+            padding-right: 100px;
+        }
+
     </style>
 
 </head>
@@ -111,6 +123,15 @@
             Result
         </button>
 
+        <div class="wrapper2">
+        <span id="spn1">
+            Total is:            
+        </span>
+
+        <span id="spn2">
+            Percentage is:
+        </span>
+        </div>
     </div>
 
     <script>
@@ -126,10 +147,12 @@
         let num7=document.getElementById('num7').value;  
         
         let total=parseInt(num1)+parseInt(num2)+parseInt(num3)+parseInt(num4)+parseInt(num5)+parseInt(num6)+parseInt(num7);
-        console.log(total);
+        // console.log(total);
+        document.getElementById('spn1').innerText="Total is: "+total;
 
          total=total/7;
-        console.log(total);
+        // console.log(total);
+        document.getElementById('spn2').innerText="Percentage is: "+total;
 
         if (total>=100)
          {
