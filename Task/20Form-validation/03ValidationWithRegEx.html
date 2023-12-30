@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regular Expression</title>
+</head>
+<body>
+    <input type="text" onblur="function_value(this,'spnid1')" placeholder="Enter UserName">
+    <span id="spnid1"></span>
+    <input type="text" onblur="function_email(this,'spnid2')" placeholder="Enter Email">
+    <span id="spnid2"></span>
+    <input type="text" onblur="function_pass(this,'spnid3')" placeholder="Enter Password">
+    <span id="spnid3"></span>
+    <input type="text" name="" onblur="function_phone(this,'spnid4')" placeholder="Enter Phone-number">
+    <span id="spnid4"></span>
+
+    <script>
+        function function_value(d,error)
+         {
+                let name = /^[a-zA-Z]+$/;//it is matched with this value
+                if (name.test(d.value))
+                 {
+                    document.getElementById(error).innerHTML="";    
+                }
+                else
+                {
+                    document.getElementById(error).innerHTML="it is not right username";    
+                }
+        }
+
+        function function_email(d,error)
+         {
+            let email = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;   
+                if (email.test(d.value))
+                 {
+                    document.getElementById(error).innerHTML="";    
+                }
+                else
+                {
+                    document.getElementById(error).innerHTML="you are not insert right value";
+                }
+        }
+
+        function function_pass(d,error)
+         {
+            let pwd = /^[a-zA-z0-9._-]{3,5}$/;
+            if (pwd.test(d.value))
+             {
+                document.getElementById(error).innerHTML="";      
+            }    
+            else
+            {
+                document.getElementById(error).innerHTML="it is not match with my value";    
+            }
+        }
+        function function_phone(deepak,phone)
+         {
+            var mobile = /^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
+            if (mobile.test(deepak.value))
+             {
+                document.getElementById(phone).innerHTML="";
+            }    
+            else
+            {
+                document.getElementById(phone).innerHTML="It is not good phone number";
+            }
+        }
+
+    </script>
+
+</body>
+</html>
