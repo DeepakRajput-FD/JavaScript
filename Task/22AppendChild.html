@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button onclick="one()">
+        click
+    </button>
+    <script>
+        function one(params) {
+            
+            let text=document.createElement('h1');
+            console.log(text);
+            let text2=document.createTextNode("this is text node"); //createtextnode is used to create text  
+            text.appendChild(text2);//this is append the text their child
+        }
+    </script>
+</body>
+</html>
