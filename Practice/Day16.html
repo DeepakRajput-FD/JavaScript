@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create a button</title>
+</head>
+<body>
+    
+    <input type="number" name="" id="input1">
+
+    <button onclick="function_my_button()">
+        create a button
+    </button>
+
+    <script>
+        console.log("hello i am creating a clickable button");
+    
+       function function_my_button()
+        {
+            let b=document.getElementById('input1');
+            for (let i = 0; i <=b.value; i++)
+             {
+                let a=document.createElement('button');
+                a.innerHTML="hello"+i;   
+                console.log(a);
+            }
+
+            }
+    </script>
+</body>
+</html>
