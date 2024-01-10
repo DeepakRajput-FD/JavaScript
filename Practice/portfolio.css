@@ -15,13 +15,19 @@
     text-transform: capitalize;
 }
 
+a{
+    text-decoration: none;
+}
+
 .col-20
 {
     border: 2px solid black;
     background: #040b14;
     width: 20%;
     color: white;
-    /* position: fixed; */
+    position: fixed;
+    top: 0;
+    left: 0;
     /* background-attachment: fixed; */
 }
     #img1
@@ -76,12 +82,19 @@
         list-style: none;
     }
 
+    .icons i:hover
+    {
+        background-color: #149ddd;
+        color: white;
+    }
+
 .col-80
 {
-    /* border: 2px solid black; */
-    /* background: url(./image/doraemon.jpg)no-repeat center center/cover; */
-    /* background-attachment: fixed; */
+    
     width: 80%;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .images2 img
 {
@@ -278,4 +291,13 @@ li
     font-size: 32px;
     padding: 40px 0px 10px;
     padding-bottom: 10px; 
+}
+
+.menus a:hover li
+{
+    color: white;
+}
+.menus a:hover i
+{
+    color: #149ddd;
 }
