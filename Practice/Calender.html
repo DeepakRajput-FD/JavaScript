@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calender</title>
+</head>
+<body>
+    <input type="date" name="" id="date1">
+    <input type="date" name="" id="date2">
+    
+    <button onclick="calender1()">
+        check
+    </button>
+
+    <script>
+        function calender1()
+        {
+             let date1= document.getElementById('date1');
+             let date2= document.getElementById('date2');
+
+             const d=new Date(date1.value);
+             let month = d.getMonth();
+             let year=d.getFullYear();
+             let day=d.getDate();
+             
+             const d2=new Date(date2.value);
+             let month2 = d2.getMonth();
+             let year2=d2.getFullYear();
+             let day2=d2.getDate();
+
+            if (day>=day2&&month>=month2&&year>=year2)
+             {
+                  console.log(' The Date Of '+parseInt(day));
+                  console.log(' The Month Of '+parseInt(month));
+                  console.log(' The Year Of '+ parseInt(year));
+
+                  let one=parseInt(year)-parseInt(year2);
+                  console.log(one);
+
+                  
+
+                //   let one=day.value-day2.value;
+                //   let two=month.value-month2.value;
+                //   let three=year.value-year2.value;
+                //   console.log(one.value);
+                //   console.log(two.value);
+                //   console.log(three.value);
+                
+            }
+            else
+            {
+                
+                 console.log(' The Date Of '+ parseInt( day2));
+                 console.log(' The Month Of '+ parseInt( month2));
+                 console.log(' The Year Of '+ parseInt( year2));
+
+                 let one=parseInt(year2)-parseInt(year);
+                  console.log(one);
+
+            }
+
+
+
+
+
+            //  console.log(year);
+            
+            //  console.log(d);
+            //  console.log(month);
+
+            //  if (date1.value>date2.value)
+            //   {
+            //    let clear= date1-date2;   
+            //     console.log(date1.value+' big date');
+            //  }
+            //  else
+            //  {
+            //     console.log(date2.value+' big date');
+            //  }
+            
+        }
+    </script>
+</body>
+</html>
