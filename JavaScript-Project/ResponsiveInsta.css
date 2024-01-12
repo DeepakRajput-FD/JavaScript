@@ -1,0 +1,42 @@
+
+@media (max-width: 1400px) { 
+ }
+ /* // X-Large devices (large desktops, 1200px and up) */
+ @media (max-width: 1200px) {  }
+ /* // XX-Large devices (larger desktops, 1400px and up) */
+ /* // Large devices (desktops, 992px and up) */
+ @media (max-width: 992px) {  }
+
+ 
+ /* // Medium devices (tablets, 768px and up) */
+ @media (max-width: 768px) { 
+    h1 {
+        font-size: 30px;
+        font-family: cursive;
+    }
+    button
+    {
+        font-size: 10px;
+        text-align: center;
+    }
+    input::placeholder
+    {
+        color: green;
+    }
+  }
+
+/* // Small devices (landscape phones, 576px and up) */ 
+@media (max-width: 576px) 
+{
+    button
+    {
+        padding:10px 50px;
+    }
+
+    .wrapper
+    {
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+
+ }

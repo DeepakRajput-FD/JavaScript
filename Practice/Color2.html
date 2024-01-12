@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color start and reverse</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #block
+        {
+            width: 300px;
+            height: 300px;
+            border: 2px solid black;
+        }
+        img
+        {
+            width: 100px;
+            height: 100px;
+            border: 2px solid blue;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+        <div id="block">
+            
+        </div>
+
+     <button onclick="left()">
+        Left
+     </button>
+     <button onclick="right()">
+        Right
+     </button>
+
+     <button onclick="change()">change</button>
+     <button onclick="reverse()">reverse</button>
+     <button onclick="incre()">incre</button>
+     <button onclick="decre()">decre</button>
+     
+
+     <div class="images">
+        <img src="./image/Akshay-Kumar.jpg" alt="">
+        <img src="./image/cartoon1-removebg-preview.png" alt="">
+        <img src="./image/chatboat.png" alt="">
+        <img src="./image/doraemon.jpg" alt="">
+     </div>
+     
+
+     <script>
+        arr=['Red', 'Orange', 'Yellow', 'Green ','Blue ','Purple', 'Pink ','Brown','Black','Gray ','teal' ];
+        let i=0;
+
+       let images= document.getElementsByTagName('img');
+
+        function right()
+         {
+             if (i==10) 
+             {
+                 i=0;    
+                }
+                i++;
+                document.getElementById('block').style.background=arr[i];
+        }
+
+        function left()
+         {
+             if (i==0) 
+             {
+                 i=10;    
+                }
+                i--;
+                document.getElementById('block').style.background=arr[i];
+        }
+
+        function change()
+         {
+            images[i].style.display='block';
+            document.getElementById('block').style.background=images[i];
+            
+            if (i==4)
+             {
+                i=0;    
+            }
+            i++;    
+        }
+
+        function reverse()
+         {
+            document.getElementById('block').style.background=images[i];
+            if (i==0)
+             {
+                i=4;
+            }    
+            i--;    
+        }
+
+
+        let count = 0
+
+        function incre() {
+            count++
+            console.log(count);
+        }
+        function decre() {
+            count--
+            console.log(count);
+        }
+        
+
+     </script>
+
+
+    </body>
+    
+</html>
