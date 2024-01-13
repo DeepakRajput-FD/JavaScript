@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button onclick="check()">click</button>
+    <script>
+        function check() {
+            let num=parseInt( document.getElementById('input1').value);
+            let zero=0,one=1;            
+            for (let i = 1; i <=num; i++) 
+            {
+                let next=zero+one;
+                console.log(next);
+                zero=one;//one value is give the value to the zero value
+                one=next;//next value is give the one value
+            }
+        }
+        
+    </script>
+</body>
+</html>

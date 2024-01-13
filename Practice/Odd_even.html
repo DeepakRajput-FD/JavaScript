@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odd AND Even</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <button onclick="change()">Check</button>
+    <script>
+        function change()
+         {
+           let input1= document.getElementById('input1');
+            if (input1.value/2==0)
+             {
+                console.log("this is even Value " +input1.value);
+            }
+            else
+            {
+                console.log("this is odd Value "+input1.value);
+            }
+        }
+    </script>
+</body>
+</html>

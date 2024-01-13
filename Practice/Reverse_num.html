@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse_number</title>
+    <input type="number" id="input1" onblur="function_rev()">
+</head>
+<body>
+    <script>
+        function function_rev()
+         {
+            
+             let number=document.getElementById('input1').value;
+             while (number>0)
+         {
+            let rev_num=0;
+          let digit=number%10;
+           rev_num=rev_num+digit;//0=0+5=5
+           number=Math.floor(number/10);
+           console.log(rev_num);
+        }
+    }
+           
+    </script>
+</body>
+</html>
