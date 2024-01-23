@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Slider</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        #image-wrapper
+        {
+            width: 80%;
+            height: 600px;
+            margin: 50px auto;
+            border: 2px solid black;
+        }
+       
+        
+    </style>
+</head>
+<body>
+    <div id="image-wrapper">
+    </div>
+    <button onclick="start()">start</button>
+
+    <!-- <img src="./image/Akshay-Kumar.jpg" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt=""> -->
+    <script>
+        // let arr=['red','green','blue'];
+        let i=0;
+         let image=document.getElementsByTagName('img');
+        let back=document.getElementById('image-wrapper');
+        function start()
+        {
+             back.style.background=image[i];
+            //  image.style.display='block';
+             i++;
+            //  console.log(i);
+            }
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q8</title>
+</head>
+<body>
+    <h2>Write a JavaScript Program to find the area of a triangle? </h2>
+    <input type="text" id="input1" placeholder="Enter base value">
+    <input type="text" id="input2" placeholder="enter height value">
+    <button onclick="function_check()">
+        Check
+    </button>
+    <p id="ans">
+
+    </p>
+    <script>
+        function function_check()
+         {
+            let ans=document.getElementById('ans');
+            let base=document.getElementById('input1').value;
+            let height=document.getElementById('input2').value;
+             let count=base*height/2;
+             ans.innerHTML="Answer"+count;
+            }
+    </script>
+
+</body>
+</html>

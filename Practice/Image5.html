@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image slider</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        #img-wrapper {
+            margin: 0 auto;
+            overflow: hidden;
+            display: flex;
+            width: 80%;
+            height: 200px;
+            border: 2px solid black;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        .button-wrapper {
+            display: flex;
+            justify-content: space-evenly;
+        }
+
+        button {
+            padding: 10px;
+        }
+        img{
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="img-wrapper">
+        <img src="" alt="" id="hey">
+    </div>
+
+    <div class="button-wrapper">
+        <button onclick="left()">Left</button>
+        <button onclick="right()">Right</button>
+    </div>
+
+    <script>
+        let count = 0;
+        // let back = document.getElementById('img-wrapper');
+        let back = document.getElementById('hey');
+        let arr = ['green', 'chatboat.png', 'blue', 'teal', 'yellow'];
+        function right() {
+            back.src = arr[count];
+            console.log(back);
+            count++;
+            if (count == 5) {
+                count = 0;
+            }
+        }
+
+        function left() {
+
+            if (count == 0) {
+                count = 5;
+            }
+            count--;
+            back.style.background = arr[count];
+
+        }
+
+    </script>
+</body>
+
+</html>

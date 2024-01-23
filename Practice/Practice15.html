@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <input type="text" id="input1" placeholder="Enter Value">
+    <input type="text" name="" id="input2" placeholder="Enter Color">
+    <p id="p1">
+
+    </p>
+    <button onclick="myfun()">click</button>
+    <script>
+        function myfun()
+         {
+            
+            let input1=document.getElementById('input1');
+            let input2=document.getElementById('input2');
+            let button=document.createElement('button');
+            button.style.background=input2.value;
+            button.innerHTML=input1.value;
+           let p1= document.getElementById('p1');
+           p1.appendChild(button);
+            }
+    </script>
+</body>
+</html>

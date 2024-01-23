@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q9</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        img
+        {
+            width: 50%;
+        }
+        .wrapper
+        {
+            display: flex;
+            align-items: center;
+            column-gap: 20px;            
+        }
+        #days
+        {
+            font-size: 25px;
+            color: red;
+            text-transform: capitalize;
+        }
+    </style>
+</head>
+<body>
+    <h2>Write a JavaScript program to calculate days left until next Christmas?</h2>
+    
+    <div class="wrapper">
+    <img src="./Image/christmas_tree.webp" alt="">
+    <p id="days">
+        
+    </p>
+    </div>
+
+    <script>
+        setInterval(() =>
+         {
+            days();
+        }, 1000);
+        function days()
+         {
+            let days=document.getElementById('days');
+
+             let date2=new Date();
+             
+             let day2=date2.getDate();//day2
+             // console.log(day2);
+             let find=340-day2;
+             days.innerHTML=find+' days left until next Christmas';
+             
+            }
+    </script>
+
+</body>
+</html>
