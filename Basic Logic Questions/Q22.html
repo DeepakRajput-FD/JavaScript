@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h4>22. Check Number Is Positive or Negative in JavaScript? </h4>
+    <input type="number" name="" id="input1">
+    
+    <button onclick="hii()">
+        click
+    </button>
+
+    <p id="how">
+
+    </p>
+    <script>
+
+        function hii()
+        {
+                let a=document.getElementById('input1');
+                let u=document.getElementById('how');
+                // u.inn
+                if (a.value>0)
+                {
+                    u.innerHTML='Positive value '+a.value
+                }
+                else if (a.value<0)
+                 {
+                    u.innerHTML='negative value '+a.value
+                }
+                else if (a.value==0)
+                 {
+                    u.innerHTML='It is not Positive value or not negative value or it is undefined '+a.value    
+                }
+                else
+                {
+                    console.log('thanks ');
+                }
+            }
+            
+        
+    </script>
+</body>
+</html>
