@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q25</title>
+</head>
+<body>
+    <h3>25. Write to find number is even or odd using ternary operator in JS?</h3>
+    
+    <input type="text" name="" id="input1">
+    <button onclick="how()">click</button>
+    
+    <p id="hey">
+    </p>
+
+    <script>
+        function how()
+         {
+             let hey=document.getElementById('hey');
+            let input1=document.getElementById('input1').value;
+
+            (input1%2==0)?hey.innerHTML='even value':(input1%2==1)?hey.innerHTML='odd value':hey.innerHTML='thanks';
+            
+        }
+    </script>
+</body>
+</html>
