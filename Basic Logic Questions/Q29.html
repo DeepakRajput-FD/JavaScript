@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q29</title>
+</head>
+<body>
+    <h4>29.1  Monday to Sunday using switch case in JS?</h4>
+    <input type="text" name="" id="input1" onblur="hello()">
+    <p id="ans">
+
+    </p>
+    <script>
+        function hello()
+         {
+
+            let input1=Number(document.getElementById('input1').value);
+            let ans=document.getElementById('ans');
+             switch (input1)
+             {
+                 case 1:
+                    ans.innerHTML='Monday';
+                 break;
+
+                 case 2:
+                    ans.innerHTML='Tuesday';
+                 break;
+
+                 case 3:
+                    ans.innerHTML='Wednesday'; 
+                 break;
+
+                 case 4:
+                    ans.innerHTML='Thursday'; 
+                 break;
+
+                 case 5:
+                    ans.innerHTML='Friday'; 
+                 break;
+
+                 case 6:
+                    ans.innerHTML='Monday'; 
+                 break;
+
+                 case 7:
+                    ans.innerHTML='Sunday'; 
+                 break;
+                     
+                 default:
+                    ans.innerHTML='it is not matched with my condition';
+                 break;
+                        }
+                     }
+                        </script>
+
+</body>
+</html>
