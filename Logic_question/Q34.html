@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q34</title>
+</head>
+<body>
+    <h4> Write to print number in reverse order e.g.: number = 64728 ---> reverse =82746 in JS?</h4>
+    <input type="text" placeholder="Enter  value" id="input" onblur="fun2()">
+    <script>
+        function fun2()
+         {
+            
+             let num=Number(document.getElementById('input').value);
+             let rev=0;
+             while (num>0)
+             {
+                 let last_digit=num%10;
+                 rev=rev*10+last_digit;
+                 num=Math.floor(num/10);
+                }    
+                console.log(rev);
+            }
+    </script>
+
+
+</body>
+</html>

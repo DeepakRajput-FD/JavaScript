@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q33</title>
+</head>
+<body>
+    
+    <h4>Write to print Fibonacci series up to given numbers? </h4>
+
+    <h5>
+        Fibonacci means the addition of previous value 
+        <br>
+        for ex. => 3=> 0+1+2+3 =>6
+    </h5>
+    
+    <input type="text" placeholder="Enter Value" id="input1" onblur="my_fun()">
+
+    <script>
+       function my_fun()
+        {
+            let input=Number(document.getElementById('input1').value);
+            let contain=0;
+            
+            for (let i = 0; i <=input; i++)
+            {
+                // console.log(i);
+                contain=contain+i;
+                console.log(contain);
+            }
+        }
+    </script>
+
+</body>
+</html>
