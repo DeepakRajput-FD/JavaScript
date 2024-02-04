@@ -29,16 +29,21 @@
 
         <p id="p2">
              Current Time is 
-            <span id="span2"></span>
+            <span id="span2"></span> 
+             <span id="hour1"></span>  <!-- hours -->
+             <span id="min1"></span>  <!-- minute -->
+             <span id="second1"></span>  <!-- second -->
 
-        </p>
+            </p>
 
         <script>
             function check()
              {
                 let span1=document.getElementById('span1');
                 let span2=document.getElementById('span2');
-                
+                let hour1=document.getElementById('hour1');
+                let min1=document.getElementById('min1');
+                let second1=document.getElementById('second1');
                 
                 let date1=new Date();
                 let day1=date1.getDay();
@@ -47,56 +52,68 @@
 
                 switch (day1)
                  {
-                    case 1:
+
+                    case 0:
+                        day1='sunday';
+                        break;
+
+                        case 1:
                         day1='monday';
                         break;
+
                         case 2:
                         day1='tuesday';
                         break;
+
                         case 3:
                         day1='wednesday';
                         break;
+
                         case 4:
                         day1='thursday';
                         break;
+
                         case 5:
                         day1='friday';
                         break;
+
                         case 6:
                         day1='saturday';
-                        break;
-                        case 7:
-                        day1='sunday';
                         break;
                 
                         default:
                         day1='it is not matched';
                         break;
                 }
-                console.log(day1);
                 span1.innerHTML=day1;
 
                 
                 
                 if (hours>=12)
                 {
-                    span2.innerText=hours+'pm';
-                        
+                    span2.innerText=hours+' PM:';
+                    hour1.innerHTML=hours+':';
                 }
                 else
                 {
-                    span2.innerHTML=hours+'am';
+                    span2.innerHTML=hours+' AM:';
+                    hour1.innerHTML=hours+':';   
                 }
 
               
-                span2.innerHTML=hours;
 
                 let min=date1.getMinutes();
-                console.log(min);
+                min1.innerHTML=min+':';
+
                 let second=date1.getSeconds();
-                console.log(second);
+                second1.innerHTML=second;
             }
-            check();
+
+            setInterval(() => {
+                check();
+                
+            }, 1000);
+
         </script>
 </body>
 </html>

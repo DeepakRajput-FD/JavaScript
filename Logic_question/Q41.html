@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q41</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .Date
+        {
+            margin: 50px auto;
+            display: flex;
+            width: fit-content;
+            background: url(./Surfboard.jpg)no-repeat center/cover;
+            color: white;
+            font-size: 30px;
+            padding: 50px ;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h4>41. Write a JavaScript program to get the current date?  </h4>
+    
+    <div class="Date">
+        <p id="day1"></p>
+        <p id="month1"></p>
+        <p id="year1"></p>
+    </div>
+
+    <script>
+        function date()
+         {
+            
+             let day1=document.getElementById('day1');
+             let month1=document.getElementById('month1');
+        let year1=document.getElementById('year1');
+        
+        let date1=new Date();
+        let day=date1.getDate();
+        let month=date1.getMonth();
+        month=month+1;
+        let year=date1.getFullYear();
+        
+        day1.innerHTML=day+":";
+        month1.innerHTML=month+":";
+        year1.innerHTML=year;
+    }
+        setInterval(() => {
+            date();
+        }, 1000);
+    </script>
+</body>
+</html>
