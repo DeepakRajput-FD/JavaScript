@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test1</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+        }
+        .wrapper
+        {
+            width: 80%;
+            margin: 0 auto;
+            background: url(./Image/booking_bg.jpeg)no-repeat center/cover;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            padding: 30px 0px;
+            border-radius: 10px;
+        }
+        select
+        {
+            padding: 10px 40px;
+            border-radius: 5px;
+        }
+        input
+        {
+            padding:10px 20px;
+            border: 0;
+            border-radius: 5px;
+        }
+
+        .wrap2
+        {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+        #select2,#date2,#time2
+        {
+            display: none;
+        }
+        span
+        {
+            color: red;
+        }
+
+        #show
+        {
+        color: white;
+        font-size: 25px;
+        font-weight: 500;
+        display: flex;
+        flex-direction: column;
+        background: linear-gradient(red,green);
+        border: 2px solid black;
+        }
+     
+    </style>
+</head>
+<body>
+    <header id="header1">
+        <div class="wrapper">
+            
+
+            <input type="text" name="" id="username1" placeholder="User name" onblur="myfun2(this,'spnid1','Username')">
+            <span id="spnid1">
+
+            </span>
+            
+            <input type="number" name="" id="mob1" placeholder="Mobile Number"onblur="myfun2(this,'spnid2','Phone_number')">
+            <span id="spnid2">
+
+            </span>
+            <input type="email" name="" id="email1" placeholder="Email"onblur="myfun2(this,'spnid3','Email')">
+            <span id="spnid3">
+
+            </span>
+            <input type="number" name="" id="person1" placeholder="No. of person" onblur="myfun2(this,'spnid4','person')">
+            <span id="spnid4">
+              </span>
+      
+              <!-- selection1 -->
+            <select name="" id="select1" onchange="check()" >
+                <option value="Choice of booking" >Choice of booking</option>
+                <option value="Full day booking" id="full_day" >Full day booking</option>
+                <option value="Half day booking" id="half_day">Half day booking</option>
+                <option value="Hourly booking" id="hourly">Hourly booking</option>
+            </select>
+
+            <div class="wrap2">
+                
+                <input type="date" name="" id="date2" onblur="myfun2(this)">
+                
+                <input type="time" id="time2" onblur="myfun2(this)">
+                
+
+                <!-- selection2 -->
+            <select name="" id="select2" onchange="check2()">
+                <option value="BreakFast">BreakFast</option>
+                <option value="Lunch">Lunch</option>
+                <option value="Dinner">Dinner</option>
+            </select>
+            </div>
+          
+
+            <div id="show">
+          </div>
+         
+        </div>
+
+    </header>
+    <script>
+
+        let show=document.getElementById('show');
+        
+        function myfun2(d,e,f)
+        {
+            if (d.value=='')
+            {
+                document.getElementById(e).innerHTML='Enter '+f;    
+            }    
+            else
+            {
+                let text=document.createTextNode(d.value+" ");
+                show.appendChild(text)
+              
+            }
+        }
+
+        function check()
+         {
+             let select=document.getElementById('select1').value; //selection1
+            let full=document.getElementById('full_day').value; //full day-booking
+            let date=document.getElementById('date2');  //date is visible
+            
+            let half_day=document.getElementById('half_day').value; //for the hallf day if user click
+
+            let select2=document.getElementById('select2'); //selection2
+
+            let hourly=document.getElementById('hourly').value;//for hourly
+            let time=document.getElementById('time2'); //time is display if used click
+
+            let text=document.createTextNode(select+" ");
+                show.appendChild(text)
+            
+             if (select==full) 
+             {
+                date.style.display='block';
+                select2.style.display='none';
+                time.style.display='none';   
+             }
+             else if (select==half_day)
+              {
+                date.style.display='block';
+                select2.style.display='block';
+                time.style.display='none';    
+             }
+             else if (select==hourly)
+              {
+                date.style.display='block';
+                time.style.display='block';  
+                select2.style.display='none';
+             }
+             else
+             {
+                console.log('try to next time');
+             }
+   
+       }
+
+       function check2()
+        {
+            let select2=document.getElementById('select2').value;
+
+            let text=document.createTextNode(select2+" ");
+                show.appendChild(text)
+       }
+
+   
+
+    </script>
+</body>
+</html>

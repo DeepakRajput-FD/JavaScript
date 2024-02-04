@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q39</title>
+</head>
+<body>
+    <h4>Accept 3 numbers from user using while loop and check each numbers palindrome? </h4>
+
+    <input type="text" placeholder="Enter value 1" id="input1">
+    <input type="text" placeholder="Enter value 2" id="input2">
+    <input type="text" placeholder="Enter value 3" id="input3">
+    <button onclick="myfun()">
+        click
+    </button>
+
+    <p id="ans">
+
+    </p>
+
+    <script>
+        function myfun()
+         {
+           let input1= Number(document.getElementById('input1').value);    
+           let input2= Number(document.getElementById('input2').value);    
+           let input3= Number(document.getElementById('input3').value);    
+           let ans=document.getElementById('ans');
+
+           let  clone1=input1;
+           let  clone2=input2;
+           let  clone3=input3;
+           let rev1=0,rev2=0,rev3=0;
+
+            while (input1>0 && input2>0 && input3>0)
+             {
+                let last1=input1%10;
+                let last2=input2%10;    
+                let last3=input3%10;    
+                
+                rev1=rev1*10+input1;
+                rev2=rev2*10+input2;
+                rev3=rev3*10+input3;
+
+                input1=Math.floor(input1/10);
+                input2=Math.floor(input2/10);
+                input3=Math.floor(input3/10);
+            }
+
+            if (rev1==clone1&&rev2==clone2&&rev3==clone3)
+             {
+                ans.innerHTML='palindrome num '+rev1+rev2+rev3;
+            }
+            else if (rev1!=clone1&&rev2!=clone2&&rev3!=clone3)
+             {
+                ans.innerHTML=' not palindrome  '+rev1+rev2+rev3;
+            }
+            else
+            {
+                console.log('thanks');
+            }
+
+        }
+    </script>
+</body>
+</html>

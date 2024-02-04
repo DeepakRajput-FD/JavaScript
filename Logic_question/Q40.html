@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q40</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+      
+
+    </style>
+</head>
+<body>
+    <h4> Write a JavaScript Program to display the current day and time in the following format. 
+        Sample Output: Today is Friday. Current Time is 12 PM: 12 : 22 2 ? </h4>
+        
+
+        <p id="p1">
+            Today is
+            <span id="span1">
+            </span>
+
+        </p>
+
+        <p id="p2">
+             Current Time is 
+            <span id="span2"></span>
+
+        </p>
+
+        <script>
+            function check()
+             {
+                let span1=document.getElementById('span1');
+                let span2=document.getElementById('span2');
+                
+                
+                let date1=new Date();
+                let day1=date1.getDay();
+                // console.log(day1);
+                let hours=date1.getHours();
+
+                switch (day1)
+                 {
+                    case 1:
+                        day1='monday';
+                        break;
+                        case 2:
+                        day1='tuesday';
+                        break;
+                        case 3:
+                        day1='wednesday';
+                        break;
+                        case 4:
+                        day1='thursday';
+                        break;
+                        case 5:
+                        day1='friday';
+                        break;
+                        case 6:
+                        day1='saturday';
+                        break;
+                        case 7:
+                        day1='sunday';
+                        break;
+                
+                        default:
+                        day1='it is not matched';
+                        break;
+                }
+                console.log(day1);
+                span1.innerHTML=day1;
+
+                
+                
+                if (hours>=12)
+                {
+                    span2.innerText=hours+'pm';
+                        
+                }
+                else
+                {
+                    span2.innerHTML=hours+'am';
+                }
+
+              
+                span2.innerHTML=hours;
+
+                let min=date1.getMinutes();
+                console.log(min);
+                let second=date1.getSeconds();
+                console.log(second);
+            }
+            check();
+        </script>
+</body>
+</html>
